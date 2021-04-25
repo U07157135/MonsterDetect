@@ -1,5 +1,5 @@
+from tflite_runtime.interpreter import Interpreter
 from MapleStoryWindows import *
-import tensorflow as tf
 from detect import *
 import cv2
 import time
@@ -30,7 +30,7 @@ while True:
     t2 = time.monotonic()
     f_result = draws_objects(frame, results, labels, width, height)
     t3 = time.monotonic()
-    
+
     print("t2-t1",round(t2-t1,2))
     print("t3-t2",round(t3-t2,2))
     t2_fps = cv2.getTickCount()

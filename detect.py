@@ -22,7 +22,7 @@ from __future__ import print_function
 import re
 import cv2 
 import numpy as np
-from tflite_runtime.interpreter import Interpreter
+
 
 
 def load_labels(path):
