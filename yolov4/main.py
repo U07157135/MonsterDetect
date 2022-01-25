@@ -1,12 +1,12 @@
 from tflite_runtime.interpreter import Interpreter
-from MapleStoryWindows import *
-from detect import *
+from SearchWindow import *
+from tfapi import *
 import cv2
 import time
 
 
-labels = load_labels(".\\labels.txt")
-interpreter = Interpreter(".\\MapleStoryModel.tflite")
+labels = load_labels(".\\labels\\labels.txt")
+interpreter = Interpreter("\\model\\MapleStoryModel.tflite")
 
 interpreter = Interpreter(interpreter)
 interpreter.allocate_tensors()
