@@ -27,7 +27,7 @@
 **使用PIL**  </br>
 ![](https://i.imgur.com/9IFyd7i.png)
 **讀取視窗** </br>
-![](https://github.com/U07157135/MapleStoryMonsterDetect/blob/main/img/Hnet-image.gif)
+![](https://github.com/U07157135/MapleStoryMonsterDetect/blob/main/img/result.gif)
 **速度差別**
 * **GPU** </br>
     * ![](https://i.imgur.com/NrHLljv.png)
