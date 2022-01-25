@@ -22,10 +22,21 @@
 | Pytorch  |  1.10.0+cu113 |
 
 ## 結果
+**使用OpenCV**
+![](https://i.imgur.com/gQY39TT.png)
+**使用PIL**
+![](https://i.imgur.com/9IFyd7i.png)
+**讀取視窗**
+![](https://github.com/U07157135/MapleStoryMonsterDetect/blob/main/img/Hnet-image.gif)
 
 
 ## 問題
-
+* 問題一
+    * SearchWindow這個程式當初在抓取MapleStory視窗時常常會顯示黑畫面，後來才發現是因為使用VScode開啟檔案時視窗的名子包含了MapleStory導至有一個以上的MapleStory的視窗才會讓程式抓不到。
+* 問題二
+    * SearchWindow這個程式是使用win32api來抓取MapleStory的畫面，而取得的影像channel不知道到是RGBA還是BGRA所以後來把影像的Alpha值先去除掉只留下RGB，接著嘗試RGB和BGR到底是哪個通道，結果是BGR，那在把影像傳入模型運算前必須先轉換成RGB通道才能正確的偵測，偵測完後必須再將影像轉回BGR因為要使用OpenCV的imshow而opencv的東西都是走BGR如果直接顯示的話色彩會跑掉。
+* 問題三
+    * 整體結果不太好，雖然該辨識的都有辨識到但不該辨識的也辨識進去了還有重複辨識也是個問題，但我的訓練樣本才40張圖100多個物件圖片算極少樣本吧。
 
 
 # yolov4 
